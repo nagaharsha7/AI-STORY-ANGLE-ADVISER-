@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-darkbg-deep text-gray-100 font-sans selection:bg-brand selection:text-white;
+  }
+}
+
+/* Custom Scrollbar for professional coding & scrolling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-darkbg-deep;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-darkbg-border rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand;
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  background: rgba(22, 22, 31, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-hover {
+  @apply transition-all duration-300;
+}
+
+.glass-panel-hover:hover {
+  background: rgba(26, 26, 36, 0.85);
+  border-color: rgba(255, 87, 34, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(255, 87, 34, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Soft orange ambient glows */
+.glow-orange {
+  box-shadow: 0 0 20px 0 rgba(255, 87, 34, 0.15);
+}
+
+.glow-orange-lg {
+  box-shadow: 0 0 40px -5px rgba(255, 87, 34, 0.25);
+}
+
+/* Smooth custom transitions */
+.transition-sidebar {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loader custom spinner */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}

@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+backend/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Local credentials
+backend/firebase-service-account.json
+
+# Production builds
+frontend/dist/
+frontend/build/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
